@@ -1,0 +1,94 @@
+body
+{
+    font-family:"Comic Sans MS";
+    font-size:15px;
+    color: #FFFFFF;
+    line-height:1.6em;
+    background-color: #2E64FE;
+}
+
+li
+{
+    list-style:none;
+}
+
+a
+{
+    text-decoration:none;
+}
+
+label
+{
+    display:inline-block;
+    width:210px;
+}
+
+input[type='text']
+{
+    width:89%;
+    padding:4px;
+    border-radius:5px;
+    border:1px #FFFFFF solid;
+
+}
+input[type='number']
+{
+    width:50px;
+    padding:4px;
+    border-radius:5px;
+    border:1px #FFFFFF solid;
+
+}
+
+.container
+{
+    width:60%;
+    margin:0 auto;
+    overflow:auto;
+}
+
+.center_container
+{
+    text-align: center;
+}
+
+header
+{
+    border-bottom:3px #FFFFFF solid;
+    text-align:center;
+}
+
+footer
+{
+    border-top:3px #FFFFFF solid;
+    text-align:center;
+    padding-top:5px;
+}
+main
+{
+    padding-bottom:20px;
+}
+
+a.start
+{
+    display:inline-block;
+    color:#FFFFFF;
+    background: #0101DF;
+    border:1px dotted #FFFFFF;
+    padding: 6px 13px;
+    text-align:center;
+}
+.current
+{
+    padding:10px;
+    background:#0101DF;
+    text-align:center;
+}
+
+@media only screen and (width:960px)
+{
+    .container
+    {
+       width:80%;
+    }
+}
