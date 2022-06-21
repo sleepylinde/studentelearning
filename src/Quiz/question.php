@@ -1,15 +1,27 @@
-<?php include 'database.php'; ?>
+<?php include 'database.php';?>
 
 <?php
-    //Set question number
-    $number = (int) $_GET['n'];
 
-    $query= "SELECT * FROM 'questions' WHERE question_number = $number";
+    //Set question Number
+    $number = (int)$_GET['n'];
 
-    $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+    //Get Question
+    $query = "Select * from question where question_number = $number";
 
+    //Get result
+    $result = $mysqli->query($query) or die ($mysqli->error.__LINE__);
     $question = $result->fetch_assoc();
+
+
+    //Get Choices
+    $query = "Select * from choices where question_number = $number";
+
+    //Get results
+    $choices = $mysqli->query($query) or die ($mysqli->error.__LINE__);
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -27,27 +39,27 @@
 <main>
     <div class="container">
         <div class="current">
-            Frage 1 von 5
+            Frage <?php echo $question['question_number']; ?> von <?php echo $total; ?>
         </div>
         <p class="question">
-            <?php echo $question['text'];?>
+            <?php echo $question['question_text'];?>
         </p>
         <form method="post" action="process.php">
             <ul class="choices">
-                <li><input name="choice" type="radio" value="1"/>HyperText Markup Language</li>
-                <li><input name="choice" type="radio" value="1"/>Hyper Processing Language</li>
-                <li><input name="choice" type="radio" value="1"/>Heavy Text Making Level</li>
-                <li><input name="choice" type="radio" value="1"/>HyperText Preprocessor</li>
+                <?php while($row = $choices->fetch_assoc()): ?>
+                    <li><input name="choice" type="radio" value="<?php echo $row['choice_id']?>"/><?php echo $row['choice_text']?></li>
+                <?php endwhile; ?>
             </ul>
             <div class="center_container">
             <input type="submit" value="Bestätigen" />
+            <input type="hidden" name="number" value="<?php echo $number?>";/>
             </div>
         </form>
     </div>
 </main>
 <footer>
     <div class="container">
-        WebDev SoSe 2022 &copy; David Kalus - Hauke Thape - Johanna ? - Kevin Dreyer - Louis Punak
+        WebDev SoSe 2022 &copy; David Kalus - Hauke Thape - Johanna Welter - Kevin Dreyer - Louis Punak
     </div>
 </footer>
 </body>

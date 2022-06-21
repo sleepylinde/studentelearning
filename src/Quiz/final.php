@@ -19,7 +19,7 @@
 </main>
 <footer>
     <div class="container">
-        WebDev SoSe 2022 &copy; David Kalus - Hauke Thape - Johanna ? - Kevin Dreyer - Louis Punak
+        WebDev SoSe 2022 &copy; David Kalus - Hauke Thape - Johanna Welter - Kevin Dreyer - Louis Punak
     </div>
 </footer>
 </body>

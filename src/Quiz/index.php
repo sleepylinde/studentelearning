@@ -1,4 +1,14 @@
-<?php include 'database.php'; ?>
+<?php include 'database.php';?>
+
+<?php
+//Get total Number of Questions
+$query = "Select * from question";
+
+//Get results
+$results = $mysqli->query($query) or die ($mysqli->error.__LINE__);
+$total = $results->num_rows;
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -20,10 +30,10 @@
         </div>
         <div class="info_container">
             <ul>
-                <p><span><strong>Anzahl der Fragen:</strong>5</span></p>
+                <p><span><strong>Anzahl der Fragen:</strong><?php echo $total?></span></p>
                 <p><strong>Quizform:</strong>Multiple-Choice</p>
                 <p><strong>Fachbereich:</strong>WebDev</p>
-                <p><strong>Dauer:</strong>6 Minuten</p>
+                <p><strong>Dauer:</strong><?php echo $total * .5;?> Minuten </p>
             </ul>
             <br>
             <br>
@@ -34,7 +44,7 @@
     </main>
     <footer>
         <div class="container">
-            WebDev SoSe 2022 &copy; David Kalus - Hauke Thape - Johanna ? - Kevin Dreyer - Louis Punak
+            WebDev SoSe 2022 &copy; David Kalus - Hauke Thape - Johanna Welter - Kevin Dreyer - Louis Punak
         </div>
     </footer>
 </body>
