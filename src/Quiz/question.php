@@ -1,4 +1,4 @@
-<?php include 'database.php';?>
+<?php include 'database.php'; include 'process.php'?>
 
 <?php
 
@@ -18,6 +18,11 @@
 
     //Get results
     $choices = $mysqli->query($query) or die ($mysqli->error.__LINE__);
+
+    //Get total questions
+    $query = "Select * from question";
+    $results = $mysqli->query($query) or die($mysqli->error - __LINE__);
+    $total = $results->num_rows;
 
 ?>
 
