@@ -8,6 +8,8 @@ services:
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: example
+    volumes:
+      - ./src/data:/var/lib/mysql
 
   adminer:
     image: adminer
