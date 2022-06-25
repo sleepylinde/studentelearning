@@ -1,9 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset=""utf-8" />
     <title>Teste dein Wissen! :-)</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
 </head>
 <body>
 <header>
@@ -14,8 +15,9 @@
 <main>
     <h2>Herzlichen Glückwunsch!!</h2>
         <p>Du bist ein echter Quizmaster!!!</p>
-        <p>Deine Punktzahl beträgt: 5</p>
+        <p>Deine Punktzahl beträgt: <?php echo $_SESSION['score']; ?></p>
     <a href="question.php?n=1" class="start">Neustart</a>
+    <?php $_SESSION['score'] = 0; ?>
 </main>
 <footer>
     <div class="container">
