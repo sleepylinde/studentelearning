@@ -16,19 +16,19 @@ if (isset($_POST ['submit']))
     $choices[5]= $_POST['choice5'];
 
     //Query of the Question
-    $query = "INSERT INTO questions(question_number, question_text) VALUES($question_number,$question_text)";
+    $query = "INSERT INTO question (question_number, question_text) VALUES('$question_number','$question_text')";
 
     //Run the query
     $insert_row = $mysqli->query($query) or die ($mysqli->error.__LINE__);
 
     //Validation of the inserts
-    if(insert_row)
+    if($insert_row)
     {
         foreach($choices as $choice => $value )
         {
-            if($value != '')
+            if($value)
             {
-                if(correct_choice == $choice)
+                if($correct_choice == $choice)
                 {
                     $is_correct = 1;
                 }
@@ -38,19 +38,19 @@ if (isset($_POST ['submit']))
                 }
 
                 //Query of the choices
-                $query = "INSERT INTO choices (question_number), ic_correct, choice_text) VALUES (question_number,$is_correct,$value)";
+                $query = "INSERT INTO choices (choice_text, is_correct, question_number) VALUES('$value','$is_correct', $question_number)";
 
                 //Run the Query
-                $insert_row = mysqli->query($query) or die ($mysqli->error.__LINE__);
+                $insert_row = $mysqli->query($query) or die ($mysqli->error.__LINE__);
 
                 //Validation of the inserts
-                if($insert_row)
+                if($insert_row !=0)
                 {
                     continue;
                 }
                 else
                 {
-                    die('Error: ('.mysqli->errno.') '.mysqli->error);
+                    die('Error: ('.$mysqli->errno.') '.$mysqli->error);
                 }
             }
         }
@@ -63,7 +63,7 @@ if (isset($_POST ['submit']))
 $query = "Select * from question";
 $results = $mysqli->query($query) or die($mysqli->error - __LINE__);
 $total = $results->num_rows;
-$next = $total+1;
+$end = $total+1;
 
 ?>
 <!DOCTYPE html>
@@ -90,7 +90,7 @@ $next = $total+1;
     <form method="post" action="add.php">
         <p>
             <label>Fragennummer: </label>
-            <input type="number" value="<?php echo $next ?>"name="question_number"/>
+            <input type="number" value="<?php echo $end ?>"name="question_number"/>
         </p>
         <p>
             <label>Fragentext: </label>
@@ -117,11 +117,11 @@ $next = $total+1;
             <input type="text" name="choice5"/>
         </p>
         <p>
-            <label>Richtige Antwortnummer:</label>
+            <label>Richtige Antwort:</label>
             <input type="number" name="correct_choice"/>
         </p>
         <p>
-            <input type="submit" value="Bestätigen" />
+            <input type="submit" class="button" name="submit" value="Bestätigen" />
         </p>
     </form>
 </main>

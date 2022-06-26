@@ -1,7 +1,7 @@
 body
 {
     font-family:"Comic Sans MS";
-    font-size:15px;
+    font-size:18px;
     color: #FFFFFF;
     line-height:1.6em;
     background-color: #2E64FE;
@@ -69,7 +69,7 @@ main
     padding-bottom:20px;
 }
 
-a.start
+.button
 {
     display:inline-block;
     color:#FFFFFF;
@@ -89,6 +89,6 @@ a.start
 {
     .container
     {
-       width:80%;
+        width:80%;
     }
 }

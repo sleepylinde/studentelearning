@@ -39,7 +39,8 @@ $total = $results->num_rows;
             <br>
         </div>
         <div class="center_container">
-            <a href="question.php?n=1" class="start">Start</a>
+            <a href="question.php?n=1" class="button">Start</a>
+            <a href="add.php" class="button">Frage hinzufügen</a>
         </div>
     </main>
     <footer>
