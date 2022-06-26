@@ -16,7 +16,7 @@
     <h2>Herzlichen Glückwunsch!!</h2>
         <p>Du bist ein echter Quizmaster!!!</p>
         <p>Deine Punktzahl beträgt: <?php echo $_SESSION['score']; ?></p>
-    <a href="question.php?n=1" class="start">Neustart</a>
+    <a href="question.php?n=1" class="button">Neustart</a>
     <?php $_SESSION['score'] = 0; ?>
 </main>
 <footer>
