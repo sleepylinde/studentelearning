@@ -1,7 +1,9 @@
-body{
-    background-repeat: no-repeat;
+main .ads{
     background-image: url("../images/background1.gif");
-    background-size: 45%;
-    background-attachment: fixed;
+    background-size: 100%;
     background-position: center center;
+    margin: auto;
+    width: 50%;
+    border: 5px;
+    padding: 10px;
 }
