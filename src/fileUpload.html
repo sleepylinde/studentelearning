@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fileupload</title>
+
+    <style>
+
+        a{
+            font: 45px "Courier New"
+        }
+
+        div{
+            height: 600px;
+            width: 500px;
+            float: left;
+            margin: 10px 10px 10px 10px;
+            position: relative;
+            left: 250px;
+            z-index: 2;
+        }
+
+        .home{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) ;
+        }
+
+        .courses{
+            position: absolute;
+            top: 68%;
+            left: 45%;
+            transform: translate(-50%, -50%) ;
+        }
+
+        .quiz{
+            position: absolute;
+            top: 87.5%;
+            left: 50%;
+            transform: translate(-50%, -50%) ;
+        }
+
+        .fileUpload{
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            font-size: 180%;
+        }
+
+        .submitUpload{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: yellow;
+            font-size: 200%;
+        }
+
+        a:link {
+            color: blue;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: coral;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: lightgreen;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    </style>
+
+    <map name="workmap">
+        <area shape="rect" coords="10,250,485,360" alt="Home" href="https://www.google.de/?hl=de">
+        <area shape="rect" coords="60,370,380,475" alt="Course Selection" href="https://www.google.de/?hl=de">
+        <area shape="rect" coords="10,500,485,600" alt="Quiz" href="https://www.google.de/?hl=de">
+    </map>
+
+</head>
+
+<body style="background-color: cornflowerblue">
+    <h1 style="text-align: center;border:2px solid white;color: white; font: 45px 'Courier New'">Fileupload</h1>
+
+    <div>
+        <img src="https://media.giphy.com/media/hUA5JLuHW7kTDQMy7f/giphy.gif" alt="Books" usemap="#workmap" style="width:500px;height:600px">
+        <a href="https://www.google.de/?hl=de" class="home">Home</a>
+        <a href="https://www.google.de/?hl=de" class="courses">Courses</a>
+        <a href="https://www.google.de/?hl=de" class="quiz">Quiz</a>
+    </div>
+
+    <div>
+        <img src="https://media.giphy.com/media/l1J9KmWn8C0yei5fW/giphy.gif" alt="Upload" style="width:500px;height:600px">
+        <form>
+            <input type="file" class="fileUpload">
+            <input type="submit" value="Submit" class="submitUpload">
+        </form>
+    </div>
+
+    <div class="speech">
+        <img src="https://media.giphy.com/media/as521kub4b68hW2JhK/giphy.gif" alt="FunnyGifxD" style="width:500px;height:600px;" >
+    </div>
+
+
+</body>
+</html>
