@@ -3,12 +3,22 @@ body
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
-main .ads{
-    background-image: url("../images/background1.gif");
+.course{
+    width: 33.33%;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.ads{
+    display: inline-block;
+    background-image: url("../resources/images/background1.gif");
     background-size: 100%;
     background-position: center center;
-    margin: auto;
-    width: 50%;
-    border: 5px;
-    padding: 10px;
+    margin: 0 auto;
+    width: 33.33%;
+}
+.right{
+    width: 33.33%;
+    margin-left: 10px;
+    margin-right: 30px;
 }
