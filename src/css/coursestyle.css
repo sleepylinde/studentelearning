@@ -25,6 +25,13 @@ body
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
+.upload{
+  float: right;
+    margin-top: 5%;
+    width: 25%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
 /* unvisited link */
 a:link {
     color: red;

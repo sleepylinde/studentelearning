@@ -39,7 +39,7 @@
                 <p align="center"></p>
             </div>
             <div class="content" style="float:right;">
-                <h3> Download Bereich</h3>
+                <h3> Download Bereich ***UNDER CONSTRUCTION***</h3>
                 <a href="../resources/course files/webdev/Grundlagen Web Anwendungen.pdf" title="Grundlagen Web Anwendung" download="Grundlagen Web Anwendung.pdf">Grundlagen Web Anwendung</a><br>
                 <a href="../resources/course files/webdev/Grundlagen HTML.pdf" download="Grundlagen HTML.pdf">Grundlagen HTML</a><br>
                 <a href="../resources/course files/webdev/Grundlagen CSS.pdf" download="Grundlagen CSS.pdf">Grundlagen CSS.</a><br>
@@ -47,7 +47,23 @@
                 <a href="../resources/course files/webdev/Document Object Model.pdf" download="Document Object Model.pdf">Document Object Model</a><br>
                 <a href="../resources/course files/webdev/JavaScript.pdf" download="JavaScript.pdf">JavaScript</a><br>
             </div>
-    
+            <div class="upload">
+                <p> Sie können ihre wöchentlichen Hausaufgaben hier hochladen:</p>
+                <input id="fileupload" type="file" name="fileupload" />
+                <button id="upload-button" onclick="uploadFile()"> Upload </button>
+                <!-- TODO roles -->
+                <script>
+                    async function uploadFile() {
+                        let formData = new FormData();           
+                        formData.append("file", fileupload.files[0]);
+                        await fetch('upload.php', {
+                          method: "POST", 
+                          body: formData
+                        });    
+                        alert('The file has been uploaded successfully.');
+                    }
+                    </script>
+            </div>
 
     </main>
     
