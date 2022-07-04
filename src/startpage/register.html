@@ -2,7 +2,7 @@
 <body>
 <h1>Registrierung</h1>
 
-<form action="" method="POST">
+<form action="auth.php" method="post">
     <label for="username"> Benutzername:</label>
     <input id="username" name="username" type="text" placeholder="Benutzername eingeben" required>
     <br>
@@ -15,8 +15,13 @@
     <input type="email" name="email" id="email" placeholder="Email Adresse eingeben" required>
     <br>
     <br>
-    <input type="submit" formaction="./registerUser.php" value="Registrieren">
-
+    <select name="role">
+        <option value="student">Student</option>
+        <option value="dozent">Dozent</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" name="submit-register-form" value="Registrieren">
 </form>
 </body>
 </html>
