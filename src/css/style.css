@@ -5,10 +5,12 @@ body
     color: #FFFFFF;
     line-height:1.6em;
     background-color: #2E64FE;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin:auto;
 }
-
+.h1
+{
+    font-size:36px;
+}
 li
 {
     list-style:none;
@@ -47,6 +49,7 @@ input[type='number']
     width:60%;
     margin:0 auto;
     overflow:auto;
+    padding-left:30px;
 }
 
 .center_container
@@ -87,10 +90,77 @@ main
     text-align:center;
 }
 
-@media only screen and (width:960px)
+@media only screen and (width:980px)
 {
     .container
     {
-        width:80%;
+        width:800%;
     }
+}
+.arrow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_container
+{
+    text-align:center;
+    width:101%;
+    margin-top: -3.5%;
+
+}
+.button_container2
+{
+    text-align:center;
+    width:101%;
+    margin-top: 3.5%;
+
+}
+.clickhere
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blink {
+    animation-name: animation_blink;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background: red;
+    background: -webkit-linear-gradient(left, red, orangered, orange, yellow);
+    background: -o-linear-gradient(right, red, orangered, orange, yellow);
+    background: -moz-linear-gradient(right, red, orangered, orange, yellow);
+    background: linear-gradient(to right, red, orangered, orange, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+}
+
+@keyframes animation_blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.scam1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:30px;
+}
+.nyan
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,7 +1,7 @@
 <?php include 'database.php';?>
 
 <?php
-//Get total Number of Questions
+//Get total amount of Questions which are shown in the general information about the quiz. You can find it under the Point "Anzahl der Fragen: *total amount of questions in the database*"
 $query = "Select * from question";
 
 //Get results
@@ -12,17 +12,23 @@ $total = $results->num_rows;
 
 <!DOCTYPE html>
 <html>
+
+
 <head>
     <meta charset=""utf-8" />
     <title>Teste dein Wissen! :-)</title>
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
 </head>
+
+
 <body>
+
     <header>
-        <div class="container">
-            <h1>BIST DU DER QUIZMASTER?</h1>
+        <div class="h1">
+            <h1><span class="blink">BIST DU DER QUIZMASTER???</span></h1>
         </div>
     </header>
+
     <main>
         <div class="center_container">
             <h2>TESTE DEIN WISSEN JETZT!</h2>
@@ -34,19 +40,29 @@ $total = $results->num_rows;
                 <p><strong>Quizform:</strong>Multiple-Choice</p>
                 <p><strong>Fachbereich:</strong>WebDev</p>
                 <p><strong>Dauer:</strong><?php echo $total * .5;?> Minuten </p>
+                 <div class="clickhere">
+                      <img src="../resources/images/clickhere_red.gif" alt="clickhere_red.gif" WIDTH="88" HEIGHT="31">
+                  </div>
+                <div class="arrow">
+                     <img src="../resources/images/arrowdown.gif" alt="arrowdown.gif" WIDTH="242" HEIGHT="360">
+                 </div>
             </ul>
             <br>
             <br>
         </div>
-        <div class="center_container">
-            <a href="question.php?n=1" class="button">Start</a>
-            <a href="add.php" class="button">Frage hinzufügen</a>
+        <div class="button_container">
+            <a href="question.php?n=1" class="button">Quiz jetzt starten!</a>
         </div>
+         <div class="button_container2">
+             <a href="add.php?n=1" class="button">Erstelle deine eigenen Fragen!</a>
+         </div>
     </main>
+
     <footer>
         <div class="container">
             WebDev SoSe 2022 &copy; David Kalus - Hauke Thape - Johanna Welter - Kevin Dreyer - Louis Punak
         </div>
     </footer>
+
 </body>
 </html>

@@ -13,10 +13,19 @@
     </div>
 </header>
 <main>
+    <div class="center_container">
     <h2>Herzlichen Glückwunsch!!</h2>
         <p>Du bist ein echter Quizmaster!!!</p>
         <p>Deine Punktzahl beträgt: <?php echo $_SESSION['score']; ?></p>
-    <a href="question.php?n=1" class="button">Neustart</a>
+        <a href="question.php?n=1" class="button">Neustart</a>
+        <a href="index.php?n=1" class="button">Zur Homepage</a>
+    </div>
+    <div class="scam1">
+        <img src="../resources/images/scam3.gif" alt="scam3.gif" WIDTH="400" HEIGHT="300">
+        <img src="../resources/images/scam2.gif" alt="scam2.gif" WIDTH="400" HEIGHT="300">
+        <img src="../resources/images/scam1.webp" alt="scam1.webp" WIDTH="400" HEIGHT="300">
+    </div>
+    </div>
     <?php $_SESSION['score'] = 0; ?>
 </main>
 <footer>

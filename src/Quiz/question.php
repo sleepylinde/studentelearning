@@ -60,6 +60,9 @@
             <input type="submit" class="button" value="Bestätigen" />
             <input type="hidden" name="number" value="<?php echo $number?>";/>
             </div>
+            <div class="nyan">
+                <img src="../resources/images/nyan.gif" alt="nyan.gif" WIDTH="476" HEIGHT="180">
+            </div>
         </form>
     </div>
 </main>

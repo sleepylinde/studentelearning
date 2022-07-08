@@ -59,7 +59,7 @@ if (isset($_POST ['submit']))
 
 }
 
-//Get total questions
+//Get total amount of questions
 $query = "Select * from question";
 $results = $mysqli->query($query) or die($mysqli->error - __LINE__);
 $total = $results->num_rows;
@@ -84,7 +84,7 @@ $end = $total+1;
     <?php
         if(isset($message))
         {
-            echo '<p>'.$message.'</p>';
+            echo '<p>'.$message.'</p>';                 //The text "Die Frage wurde hinzugefügt" is shown when a question is successfully added to the database
         }
     ?>
     <form method="post" action="add.php">
