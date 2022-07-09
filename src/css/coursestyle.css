@@ -32,6 +32,10 @@ body
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
+
+.course input[type="submit"]{
+  width: 50%;
+}
 /* unvisited link */
 a:link {
     color: red;
@@ -39,7 +43,7 @@ a:link {
   
   /* visited link */
   a:visited {
-    color: green;
+    color: red;
   }
   
   /* mouse over link */
@@ -47,7 +51,4 @@ a:link {
     color: hotpink;
   }
   
-  /* selected link */
-  a:active {
-    color: rgb(0, 0, 0);
-  }
+  
