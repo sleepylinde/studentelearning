@@ -1,3 +1,4 @@
+<?php include 'database.php'; include 'process.php';?>
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
@@ -14,9 +15,26 @@
 </header>
 <main>
     <div class="center_container">
-    <h2>Herzlichen Glückwunsch!!</h2>
-        <p>Du bist ein echter Quizmaster!!!</p>
-        <p>Deine Punktzahl beträgt: <?php echo $_SESSION['score']; ?></p>
+        <?php
+        //Get total questions
+        $query = "Select * from question";
+        $results = $mysqli->query($query) or die($mysqli->error - __LINE__);
+        $total = $results->num_rows;
+
+        if ($_SESSION['score']/$total >= 0.51 )
+        {
+            echo '<h2>Herzlichen Glückwunsch!!!</h2>';
+            echo '<p>Du bist ein echter Quizmaster!!</p>';
+        }
+        else
+        {
+            echo '<h2>Schade, versuche es noch einmal!!</h2>';
+            echo '<p>Es ist noch kein Meister vom Himmel gefallen!</p>';
+        }
+        ?>
+        <p>Deine Punktzahl beträgt: <?php echo $_SESSION['score']?></p>
+        <?php $runde = round(($_SESSION['score'] / $total) * 100);?>
+        <p>Insgesamt sind <?php echo $runde?> % deiner Antworten richtig!</p>
         <a href="question.php?n=1" class="button">Neustart</a>
         <a href="index.php?n=1" class="button">Zur Homepage</a>
     </div>
