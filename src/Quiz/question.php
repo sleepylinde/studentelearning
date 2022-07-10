@@ -53,7 +53,7 @@
         <form method="post" action="process.php">
             <ul class="choices">
                 <?php while($row = $choices->fetch_assoc()): ?>
-                    <li><input name="choice" type="radio" value="<?php echo $row['choice_id']?>"/><?php echo $row['choice_text']?></li>
+                    <li class="choicee"><input name="choice" type="radio" value="<?php echo $row['choice_id']?>"/><?php echo $row['choice_text']?></li>
                 <?php endwhile; ?>
             </ul>
             <div class="center_container">

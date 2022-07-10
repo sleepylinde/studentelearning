@@ -37,9 +37,9 @@
             <label>Ich bin...</label>
             <br>
             <select name="role">
-            <option value="student">Student</option>
-            <option value="dozent">Dozent</option>
-        </select>
+                <option value="student">Student</option>
+                <option value="dozent">Dozent</option>
+            </select>
         </p>
         <input type="submit" class="submit" name="submit-register-form" value="Registrieren">
         <br>

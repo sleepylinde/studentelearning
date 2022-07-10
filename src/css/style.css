@@ -168,24 +168,4 @@ main
     justify-content: center;
     align-items: center;
 }
-ul{
-    display: inline;
-    list-style-type: none;
 
-}
-
-li
-{
-    float: left;
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border:3px #FFFFFF solid;
-}
-li a:hover {
-    background-color: #111;
-}
