@@ -20,7 +20,8 @@ if ($_SESSION['authUser'] == "dozent") {
     </head>
     
     <body>
-        
+
+
         <main>
         
          <div id="mainbox">
@@ -38,7 +39,6 @@ if ($_SESSION['authUser'] == "dozent") {
                 <div class="Auswahl">
                     <p><b>Hier gelangst du zu deinen Kursen:</b></p>
                 </div>
-                    
                 <div class="buttons">
                     <p>Web Development</p>
                     <button onclick="window.location.href = 'webdev/webdev_student.php';">Hier klicken</button>
@@ -48,11 +48,12 @@ if ($_SESSION['authUser'] == "dozent") {
                     <br/>
                     <p>IT-Research</p>
                     <button onclick="window.location.href = 'itresearch/itresearch_student.php';">Hier klicken</button>
-                    
+                    <p>Wöchentliches Quiz</p>
+                    <button onclick="window.location.href = '../Quiz/index.php';">Jetzt spielen!</button>
                 </div> 
                 
             </div>
-        </div> 
+        </div>
             
         <div id="werbung">
              <img src=https://i.pinimg.com/originals/a6/e2/dd/a6e2dd6a5e67dfd213b6a1928d3f43c3.jpg>

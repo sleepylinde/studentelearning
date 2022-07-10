@@ -31,6 +31,10 @@ $total = $results->num_rows;
 
     <main>
         <div class="center_container">
+            <ul>
+                <li><a href="../coursepages/kursuebersicht.php">Kursübersicht</a></li>
+                <li style="float:right"><a class="active" href="../startpage/login.php">Ausloggen</a></li>
+            </ul>
             <h2>TESTE DEIN WISSEN JETZT!</h2>
             <div>Unten erwartet dich ein Multiple-Choice Quiz, bei dem es nur eine richtige Antwort gibt. Starte jetzt und finde heraus ob du der Quizmaster bist!!! :-)  </div>
         </div>
