@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if ($_SESSION['type'] == "prof") {
-    die("Du bist kein Professor");
+if ($_SESSION['authUser'] == "prof") {
+    header("Location: ../coursepages/kursuebersicht_prof.php");
 }
 ?>
 

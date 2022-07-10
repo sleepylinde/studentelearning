@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if ($_SESSION['authUser'] == "prof") {
+    header("Location: ../coursepages/kursuebersicht_prof.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

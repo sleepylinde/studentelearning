@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+
+if ($_SESSION['authUser'] == "student") {
+    header("Location: ../coursepages/kursuebersicht.php");
+}
+
 if(isset($_POST['submit'])){
     $desc = $_POST['desc']."";
 
