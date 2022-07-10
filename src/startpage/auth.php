@@ -27,11 +27,17 @@ if (isset($_POST["submit-login-form"])) {
         $_SESSION['authUser'] = $role;
         header("Location: ../coursepages/kursuebersicht.php"); // Hinter dem Slash kommt der relative Pfad zum Home Seite
     } else {
-        echo "Invalid User";
+        echo '<script type="text/javascript" language="Javascript"> 
+        alert("Username oder Passwort falsch!") 
+        
+        if(confirm("Bei Bestätigung werden Sie wieder zur Login-Seite weitergeleitet")) 
+        {
+        window.location.href = "login.php"
+        }      
+        </script>';
     }
 }
-if (isset($_POST["submit-register-form"])){
-    echo "Hallo";
+if (isset($_POST["submit-register-form"])) {
     // Code zum Registrieren
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -39,9 +45,17 @@ if (isset($_POST["submit-register-form"])){
     $email = $_POST["email"];
 
     $eintrag = "INSERT INTO userdata (email, username, password, role) VALUES ('$email', '$username', '$password', '$role')";
-    $insert_row = $mysqli->query($eintrag) or die ($mysqli->error.__LINE__);
-    echo "erfolgreich";
-    //header('Location: /'); Hinter dem Slash kommt der relative Pfad zum Home Seite
+    $insert_row = $mysqli->query($eintrag) or die ($mysqli->error . __LINE__);
+
+    echo '<script type="text/javascript" language="Javascript"> 
+        alert("Registrierung erfolgreich.") 
+        
+        if(confirm("Bei Bestätigung werden Sie zur Login-Seite weitergeleitet")) 
+        {
+        window.location.href = "login.php"
+        }      
+        </script>';
 }
+
 
 
