@@ -1,8 +1,5 @@
 <?php
-$db_host = 'db';
-$db_name = 'User';
-$db_user = 'root';
-$db_pass = 'example';
+include '../Quiz/database.php';
 
 //Mysqli object
 $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
@@ -14,7 +11,7 @@ if(isset($_POST["submit-login-form"])) {
     $result = $mysqli->query("SELECT * FROM User Where username=" . $username . " AND password=" . $password);
     if(isset($result)){
         //Login erfolgreich
-        header("Location:E:\XAMPP\htdocs\studentelearning\src\coursepages\kursuebersicht.html"); // Hinter dem Slash kommt der relative Pfad zum Home Seite
+        header("Location:../coursepages/kursuebersicht.html"); // Hinter dem Slash kommt der relative Pfad zum Home Seite
     } else {
         echo "Anmeldedaten fehlerhaft";
         // Falsche Anmeldedaten, am besten eine Nachricht ausgeben.
@@ -32,5 +29,3 @@ if(isset($_POST["submit-login-form"])) {
     //header('Location: /'); Hinter dem Slash kommt der relative Pfad zum Home Seite
 }
 
-
-?>
