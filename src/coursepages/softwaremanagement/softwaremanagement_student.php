@@ -60,9 +60,20 @@ if ($_SESSION['authUser'] == "dozent") {
                         ?>
             </div>
             <div class="upload">
-                <h3>Hier können Sie wöchentlichen Hausaufgaben hochladen:</h3>
-                <a href="/fileUpload.html">File Upload</a>
-                
+                <p> Sie können ihre wöchentlichen Hausaufgaben hier hochladen:</p>
+                <input id="fileupload" type="file" name="fileupload" />
+                <button id="upload-button" onclick="uploadFile()"> Upload </button>
+                <script>
+                    async function uploadFile() {
+                        let formData = new FormData();           
+                        formData.append("file", fileupload.files[0]);
+                        await fetch('upload.php', {
+                          method: "POST", 
+                          body: formData
+                        });    
+                        alert('The file has been uploaded successfully.');
+                    }
+                    </script>
             </div>
 
     </main>

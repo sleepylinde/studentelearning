@@ -47,9 +47,19 @@ fclose($file);
             </div>
             <div class="content", style="float:right;">
                 <h3>Hier können Sie Ihre Files hochladen:</h3>
-                <a href="/fileUpload.html">File Upload</a>
-                    
-                    <br>
+                <input id="fileupload" type="file" name="fileupload" />
+                <button id="upload-button" onclick="uploadFile()"> Upload </button>
+                <script>
+                    async function uploadFile() {
+                        let formData = new FormData();           
+                        formData.append("file", fileupload.files[0]);
+                        await fetch('upload_prof.php', {
+                          method: "POST", 
+                          body: formData
+                        });    
+                        alert('The file has been uploaded successfully.');
+                    }
+                    </script>
 
                     <h3>Übersicht ihrer Files</h3>
                     <p><?php
