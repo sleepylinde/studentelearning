@@ -7,7 +7,7 @@
 </head>
 
 
-<form>
+<body>
 
 <header>
     <div class="header">
@@ -39,28 +39,14 @@
             <select name="role">
                 <option value="student">Student</option>
                 <option value="dozent">Dozent</option>
-
-            <div class="country">
             </select>
-            <br>
-            <br>
-            <label>Land:</label>
-            <br>
-            <select id="country">
-            </select>
-
-            <script src="jquery-2.2.4.min.js"></script>
-            <script src="custom.js"></script>
-            </div>
-        </form>
-        <div class="register-interface">
-            <input type="submit" class="submit" name="submit-register-form" value="Registrieren">
-        </div>
+        </p>
+        <input type="submit" class="submit" name="submit-register-form" value="Registrieren">
         <br>
         <br>
 </div>
-</form>
-<div class="registriere">
+
+<div class="registerhere">
     <p>Sie haben schon einen Account?</p>
     <a href="login.php" class="button">Einloggen</a>
     <br>
