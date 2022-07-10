@@ -69,7 +69,7 @@ $end = $total+1;
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset=""utf-8" />
+    <meta charset="utf-8" />
     <title>Teste dein Wissen! :-)</title>
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
 </head>

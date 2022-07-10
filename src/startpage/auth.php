@@ -14,7 +14,7 @@ if(isset($_POST["submit-login-form"])) {
     $result = $mysqli->query("SELECT * FROM User Where username=" . $username . " AND password=" . $password);
     if(isset($result)){
         //Login erfolgreich
-        header('Location: /coursepages/kursuebersicht.html'); // Hinter dem Slash kommt der relative Pfad zum Home Seite
+        header("Location:E:\XAMPP\htdocs\studentelearning\src\coursepages\kursuebersicht.html"); // Hinter dem Slash kommt der relative Pfad zum Home Seite
     } else {
         echo "Anmeldedaten fehlerhaft";
         // Falsche Anmeldedaten, am besten eine Nachricht ausgeben.
