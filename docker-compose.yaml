@@ -21,7 +21,7 @@ services:
     image: webdevops/php-nginx
     restart: always
     environment:
-      - PHP_DISPLAY_ERRORS=On
+      - PHP_DISPLAY_ERRORS=Off
     ports:
       - 80:80
     volumes:
