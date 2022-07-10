@@ -43,7 +43,7 @@ footer
     padding: 6px 13px;
     text-align:center;
     height: 60px;
-    width: 120px;
+    width: 150px;
     font-family:"Comic Sans MS";
     font-size:20px;
 }
@@ -63,4 +63,23 @@ footer
 .registerhere
 {
     padding-left: 30px;
+}
+
+.register-interface
+{
+    text-align: center;
+    padding-top:40px;
+}
+
+select
+{
+
+background-color: #ffffff;
+    border: 1px dotted #FFFFFF;
+    padding: 6px 13px;
+    margin: 0;
+    width: 15%;
+    border-radius:11px;
+    font-family:"Comic Sans MS";
+    font-size:18px;
 }

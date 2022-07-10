@@ -30,17 +30,18 @@ if (isset($_POST["submit-login-form"])) {
         echo "Invalid User";
     }
 }
-if (isset($_POST["submit-register-form"])) {
+if (isset($_POST["submit-register-form"])){
     echo "Hallo";
     // Code zum Registrieren
     $username = $_POST["username"];
     $password = $_POST["password"];
     $role = $_POST["role"];
     $email = $_POST["email"];
-    $mysqli->query("INSERT INTO userdata VALUES ('" . $email . "', '" . $username . "', '" . $password . "', '" . $role . "')");
+
+    $eintrag = "INSERT INTO userdata (email, username, password, role) VALUES ('$email', '$username', '$password', '$role')";
+    $insert_row = $mysqli->query($eintrag) or die ($mysqli->error.__LINE__);
     echo "erfolgreich";
     //header('Location: /'); Hinter dem Slash kommt der relative Pfad zum Home Seite
-
 }
-?>
+
 

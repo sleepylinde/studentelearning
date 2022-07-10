@@ -21,12 +21,12 @@
         <p>
             <label>Username </label>
             <br>
-            <input type="username" class="userinput" name="Username"/>
+            <input type="username" class="userinput" name="Username" placeholder="Benutzername eingeben" required/>
         </p>
         <p>
             <label>Passwort</label>
             <br>
-            <input type="password" class="userinput" name="Password"/>
+            <input type="password" class="userinput" name="Password" placeholder="Passwort eingeben" required/>
         </p>
             <input type="submit" class="submit" name="submit-login-form" value="Anmelden">
             <br>
@@ -35,7 +35,7 @@
 
     <div class="registerhere">
         <p>Noch keinen Account? Registrieren Sie sich hier!</p>
-        <a href="register.html" class="button">Registrieren</a>
+        <a href="register.php" class="button">Registrieren</a>
         <br>
         <br>
     </div>
