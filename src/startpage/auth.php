@@ -1,31 +1,37 @@
 <?php
-include '../Quiz/database.php';
 
 //Mysqli object
-$mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
-echo "erfolgreich";
-if(isset($_POST["submit-login-form"])) {
+$mysqli = new mysqli($db_host = 'db', $db_user = 'root', $db_pass = 'example', $db_name = 'user');
+
+//Mysqli object
+if (isset($_POST["submit-login-form"])) {
     // Code zum Anmelden
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $result = $mysqli->query("SELECT * FROM User Where username=" . $username . " AND password=" . $password);
-    if(isset($result)){
-        //Login erfolgreich
-        header("Location:../coursepages/kursuebersicht.html"); // Hinter dem Slash kommt der relative Pfad zum Home Seite
+    $username = $_POST["Username"];
+    $password = $_POST["Password"];
+
+    $stmt = $mysqli->prepare("SELECT * FROM userdata WHERE username=? AND password=?");
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $val = $result->fetch_all();
+
+    if (count($val) == 1) {
+        header("Location: ../coursepages/kursuebersicht.php"); // Hinter dem Slash kommt der relative Pfad zum Home Seite
     } else {
-        echo "Anmeldedaten fehlerhaft";
-        // Falsche Anmeldedaten, am besten eine Nachricht ausgeben.
+        echo "Invalid User";
     }
-    // Eventuell Sessions einbauen
-} if (isset($_POST["submit-register-form"])){
+}
+if (isset($_POST["submit-register-form"])) {
     echo "Hallo";
     // Code zum Registrieren
     $username = $_POST["username"];
     $password = $_POST["password"];
     $role = $_POST["role"];
     $email = $_POST["email"];
-    $mysqli->query("INSERT INTO user VALUES ('". $email ."', '". $username ."', '" . $password . "', '". $role ."')");
+    $mysqli->query("INSERT INTO userdata VALUES ('" . $email . "', '" . $username . "', '" . $password . "', '" . $role . "')");
     echo "erfolgreich";
     //header('Location: /'); Hinter dem Slash kommt der relative Pfad zum Home Seite
+
 }
+?>
 
