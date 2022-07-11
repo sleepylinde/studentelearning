@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if ($_SESSION['authUser'] == "student") {
-    header("Location: ../coursepages/kursuebersicht.php");
+if ($_SESSION['authUser'] == "dozent") {
+    header("Location: ../coursepages/kursuebersicht_prof.php");
 }
 ?>
 
