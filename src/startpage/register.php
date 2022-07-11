@@ -41,6 +41,12 @@
                 <option value="dozent">Dozent</option>
             </select>
         </p>
+        <label>Land</label>
+        <br>
+        <select id="country">
+        </select>
+        <br>
+        <br>
         <input type="submit" class="submit" name="submit-register-form" value="Registrieren">
         <br>
         <br>
@@ -49,6 +55,9 @@
 <div class="registerhere">
     <p>Sie haben schon einen Account?</p>
     <a href="login.php" class="button">Einloggen</a>
+
+    <script src="jquery-2.2.4.min.js"></script>
+    <script src="custom.js"></script>
     <br>
     <br>
 </div>
