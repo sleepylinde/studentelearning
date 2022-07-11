@@ -43,8 +43,9 @@ if (isset($_POST["submit-register-form"])) {
     $password = $_POST["password"];
     $role = $_POST["role"];
     $email = $_POST["email"];
+    $country = $_POST["country"];
 
-    $eintrag = "INSERT INTO userdata (email, username, password, role) VALUES ('$email', '$username', '$password', '$role')";
+    $eintrag = "INSERT INTO userdata (email, username, password, role, country) VALUES ('$email', '$username', '$password', '$role','$country')";
     $insert_row = $mysqli->query($eintrag) or die ($mysqli->error . __LINE__);
 
     echo '<script type="text/javascript" language="Javascript"> 

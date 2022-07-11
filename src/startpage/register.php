@@ -43,7 +43,7 @@
         </p>
         <label>Land</label>
         <br>
-        <select id="country">
+        <select id="country" name="country" type="text">
         </select>
         <br>
         <br>
